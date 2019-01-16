@@ -1,0 +1,32 @@
+site_name: 'UpText'
+site_description: 'Documentation for UpText chatbot tool'
+site_author: 'Ole Oren'
+site_url: 'https://uptext.com/'
+
+# Repository
+repo_name: ''
+repo_url: ''
+
+# Copyright
+copyright: 'Copyright &copy; 2019 Ole Oren'
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+# Customization
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
