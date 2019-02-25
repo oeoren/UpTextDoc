@@ -1,0 +1,19 @@
+resources:
+- repo: self
+queue:
+  name: Hosted VS2017
+
+steps:
+- script: |
+   pip install -r requirements.txt
+   mkdocs build  
+  displayName: Install the MkDocs + do a build
+
+- task: AzureFileCopy@2
+  displayName: AzureBlob File Copy
+  inputs:
+    SourcePath: site
+    azureSubscription: 'OleE (83f3e791-77b3-4543-a3b4-06ae1dbf9457)'
+    Destination: AzureBlob
+    storage: mkdocsvstsautomation
+    ContainerName: '$web'
